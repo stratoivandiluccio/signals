@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { Profiler } from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import MainPlain from './Main-plain';
+import MainMemo from './Main-memo';
+import MainSignals from './Main-signals';
+import { measure } from './utils';
+
+import './css.css';
+
+const MainMap = {
+  'plain': <MainPlain />,
+  'memo': <MainMemo />,
+  'signals': <MainSignals />
+}
+const version = 'signals' // plain, memo, signals
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+root.render(
+  <Profiler id='app' onRender={measure}>
+    { MainMap[version] }
+  </Profiler>
+);
