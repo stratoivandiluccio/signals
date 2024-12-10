@@ -5,7 +5,7 @@ import { counter } from "./state";
 function Main() {
   return (
     <>
-      <div>counter: {counter}</div>
+      <h1>Signals</h1>
       <Node counter={counter}>
         <Node>
           <Node />
@@ -19,6 +19,7 @@ function Main() {
             <Node/>
           </Node>
         </Node>
+        <Node/>
       </Node>
     </>);
 }

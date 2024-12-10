@@ -17,6 +17,7 @@ const MemoizedNodes = React.memo(() =>
         <Node/>
       </Node>
     </Node>
+    <Node />
   </>);
   
 function Main() {
@@ -28,7 +29,7 @@ function Main() {
 
   return (
     <>
-      <div>counter: {counter}</div>
+      <h1>Memo</h1>
       <Node counter={counter}>
         <MemoizedNodes />
       </Node>

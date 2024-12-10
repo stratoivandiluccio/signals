@@ -6,13 +6,12 @@ const Node = (props) => {
   const numberOfRenders = useRenderEffect(nodeRef)
 
   return (
-    <div className='node'>
-      <div className='itself' ref={nodeRef}>
-        <div><span>{numberOfRenders}</span>
+    <div className='node' ref={nodeRef}>
+      <div className='info'>
+        <div>render: {numberOfRenders}</div>
         {
-          props.counter ? <span className='counter'>:{props.counter}</span> : null
+          props.counter ? <div>counter: {props.counter}</div> : null
         }
-        </div>
       </div>
       <div className='child'>
         {props.children}

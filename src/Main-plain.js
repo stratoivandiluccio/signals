@@ -21,7 +21,7 @@ function Main() {
 
   return (
     <>
-      <div>counter: {counter}</div>
+      <h1>Plain</h1>
       <Node counter={counter}>
         <Node>
           <Node />
@@ -35,6 +35,7 @@ function Main() {
             <Node/>
           </Node>
         </Node>
+        <Node/>
       </Node>
     </>
   );

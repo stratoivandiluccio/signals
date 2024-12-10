@@ -5,8 +5,8 @@ export const useRenderEffect = (ref) => {
   const numberOfRenders = useRef(1)
 
   useEffect( () => {
-    ref.current.className = 'itself render';
-    setTimeout( () => ref.current.className = 'itself', 1000);
+    ref.current.className = 'node render';
+    setTimeout( () => ref.current.className = 'node', 1000);
     numberOfRenders.current++
   }, [random, ref, numberOfRenders])
 

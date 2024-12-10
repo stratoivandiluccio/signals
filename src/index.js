@@ -5,7 +5,7 @@ import MainMemo from './Main-memo';
 import MainSignals from './Main-signals';
 import { measure } from './utils';
 
-import './css.css';
+import './box.css';
 
 const MainMap = {
   'plain': <MainPlain />,

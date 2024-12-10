@@ -1,0 +1,41 @@
+/* The animation code */
+@keyframes render {
+  0%   {background-color:red; }
+  100% {background-color:rgb(179, 235, 173); }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(33, 33, 33);
+}
+
+.node {
+  background-color: rgb(179, 235, 173);
+  border: solid 1px rgb(66, 66, 66);
+  padding: 20px;
+}
+
+.node.render {
+  animation-name: render;
+  animation-duration: 1s;
+}
+
+.node .info {
+  margin-bottom: 20px;
+}
+
+.node .child {
+  display: flex;
+  column-gap: 20px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+}
+
+.child .node {
+  width: calc(50% - 10px);
+}
+
