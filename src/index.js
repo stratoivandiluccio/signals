@@ -12,7 +12,7 @@ const MainMap = {
   'memo': <MainMemo />,
   'signals': <MainSignals />
 }
-const version = 'signals' // plain, memo, signals
+const version = 'plain' // plain, memo, signals
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

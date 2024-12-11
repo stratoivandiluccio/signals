@@ -17,7 +17,7 @@ function truncate (num, places) {
   return Math.trunc(num * Math.pow(10, places)) / Math.pow(10, places);
 }
 
-const intervalOfRenderings = 5;
+const intervalOfRenderings = 10;
 let targetRender = intervalOfRenderings;
 let totalDurationTime = 0;
 let actualRenderNumber = 0;

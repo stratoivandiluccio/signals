@@ -1,8 +1,6 @@
 import React from 'react';
 import Node from './Node';
 
-// possiamo ovviare all'aggiornamento inutile dei compoenti figli Node
-// ricorrendo alla memoizzazione degi stessi 
 const MemoizedNodes = React.memo(() => 
   <>
     <Node>
